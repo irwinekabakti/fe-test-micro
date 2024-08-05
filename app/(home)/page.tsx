@@ -15,8 +15,6 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Grid>
-        {/*  <div className="my-8">
-       <div className="mx-4 md:mx-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> */}
         {loading
           ? Array.from({ length: 12 }).map((_, index) => (
               <MediaCardSkeleton key={index} />
@@ -24,8 +22,6 @@ const Home: React.FC = () => {
           : data?.getAllCars.map((item: Car) => (
               <MediaCard key={item.id} car={item} />
             ))}
-        {/*    </div>
-    </div> */}
       </Grid>
     </Container>
   );
