@@ -7,6 +7,7 @@ const GET_ALL_CARS = gql`
       brand
       model
       year
+      image
     }
   }
 `;
@@ -18,6 +19,7 @@ const GET_CAR_BY_ID = gql`
       brand
       model
       year
+      image
     }
   }
 `;
