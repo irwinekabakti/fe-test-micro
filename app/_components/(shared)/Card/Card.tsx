@@ -12,7 +12,7 @@ interface CardProps {
 }
 const MediaCard: React.FC<CardProps> = ({ car }) => {
   return (
-    <Card>
+    <Card className="cursor-pointer">
       <CardMedia
         component="img"
         sx={{ flexGrow: 1, objectFit: "cover" }}
@@ -41,7 +41,3 @@ const MediaCard: React.FC<CardProps> = ({ car }) => {
 };
 
 export default MediaCard;
-
-/*
-Red Bull Racing is thrilled to announce the launch of the RB20, our cutting-edge contender for the 2024 Formula 1 season. The RB20 has been meticulously designed and engineered to meet the high standards of performance, reliability, and innovation that our team is known for. With its debut scheduled for March 2024, the RB20 will compete in the Formula 1 World Championship, spanning from March to December 2024.
-*/
