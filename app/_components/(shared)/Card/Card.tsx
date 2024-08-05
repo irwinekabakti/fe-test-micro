@@ -6,13 +6,20 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Car } from "@/types/type";
+import { useRouter } from "next/navigation";
 
 interface CardProps {
   car: Car;
 }
 const MediaCard: React.FC<CardProps> = ({ car }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/cars/${car.id}`);
+  };
+
   return (
-    <Card className="cursor-pointer">
+    <Card className="cursor-pointer" onClick={handleClick}>
       <CardMedia
         component="img"
         sx={{ flexGrow: 1, objectFit: "cover" }}
